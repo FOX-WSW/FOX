@@ -1,0 +1,15 @@
+[Unit]
+Description=__BOT_TITLE__
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=__INSTALL_ROOT__
+EnvironmentFile=__INSTALL_ROOT__/.env
+ExecStart=__INSTALL_ROOT__/.venv/bin/python -m __PACKAGE_NAME__ preflight --live
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
