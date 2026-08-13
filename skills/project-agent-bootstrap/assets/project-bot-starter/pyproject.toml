@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "__BOT_SLUG__"
+version = "0.1.0"
+description = "Fail-closed starter for __BOT_TITLE__"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+__BOT_SLUG__ = "__PACKAGE_NAME__.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
