@@ -1,0 +1,33 @@
+{
+  "name": "__BOT_TITLE__",
+  "service": "__SERVICE_KIND__",
+  "feishu": {
+    "region": "feishu",
+    "bot_name": "__FEISHU_BOT_NAME__",
+    "allowed_chat_ids": [],
+    "allow_direct_messages": false,
+    "reply_in_topic": true
+  },
+  "codex": {
+    "command": "codex",
+    "one_topic_one_thread": true,
+    "turn_timeout_seconds": 900,
+    "max_topic_concurrency": 4
+  },
+  "supported_database_engines": __DATABASE_ENGINES_JSON__,
+  "database_sources": __DATABASE_SOURCES_JSON__,
+  "query_policy": {
+    "read_only_principal_required": true,
+    "timeout_seconds": 30,
+    "row_limit": 500
+  },
+  "safety": {
+    "dry_run": true,
+    "allow_real_writes": false,
+    "real_write_capabilities": []
+  },
+  "lifecycle": {
+    "scaffold_only": true,
+    "deployment_ready_requires_live_adapter_tests": true
+  }
+}
